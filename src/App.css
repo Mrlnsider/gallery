@@ -1,0 +1,371 @@
+.App {
+  text-align: center;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+.App-title {
+  font-size: 1.5em;
+}
+.App-intro {
+  font-size: large;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Poor+Story');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Cinzel');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+/* http://opalartglass.com/wp-content/uploads/homebg3.jpg*/
+body {
+  font-family: sans-serif;
+  background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/itCjTBE/grey-light-smooth-moving-waves-background-video-animation-hd-1920x1080_vjkea4zve__F0000.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+.noscroll {
+  overflow: hidden;
+}
+.wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.8s;
+}
+a:hover {
+  color: #ACACAC;
+}
+ul {
+  list-style: none;
+  -webkit-padding-start: 0px;
+}
+button {
+  outline: none;
+}
+header {
+  background-color: #202023;
+  padding: 20px 0px 20px;
+  margin-bottom: 10px;
+}
+header .logo  a{
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.topmenu {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.menu span {
+  color: #fff;
+  transition: 0.8s;
+}
+.menu span:hover {
+  color: #ACACAC;
+  cursor: pointer;
+}
+.menu ul {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 18px;
+}
+.menu {
+  position: relative;
+}
+.submenu {
+  position: absolute;
+  left: 15px;
+  z-index: 5;
+  min-width: 150px;
+  text-align: center;
+  border: 1px solid #CBCBCC;
+  border-radius: 10px;
+  background: #fff;
+  visibility: hidden;
+  opacity: 0; 
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+  transition: .3s linear;
+}
+.submenu a {
+  color: #202023;
+  padding: 0 25px;
+  border-radius: 8px;
+  transition: .3s;
+}
+.submenu a:hover {
+  color: #fff;
+  background-color: #202023;
+}
+nav li:hover > .submenu {
+  transform: rotateX(0deg);
+  visibility: visible;
+  opacity: 1;
+}
+input {
+  outline: none;
+}
+header input {
+  float: right;
+  width: 200px;
+  height: 30px;
+  text-indent: 20px;
+  border: none;
+  border-radius: 5px ;
+  background-color: #ACACAC;
+  transition: 0.4s;
+}
+header input:focus {
+  background-color: #fff;
+  width: 300px;
+}
+.search {
+  position: relative;
+  width: 300px;
+}
+.search  i {
+  color: #202023;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 20px;
+}
+.results {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.galleries {
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+	justify-content: space-around;
+  flex-wrap: wrap;
+}
+.galleries h2 {
+  position: absolute;
+  width: 100%;
+  top: -50px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 42px;
+  color: #202023;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s;
+}
+.galleries a:hover ~h2{
+  opacity: 1;
+  visibility: visible;
+}
+.link {
+  width: 300px;
+  position: relative;
+	margin-bottom: 100px;
+  text-align: center;
+}
+.link img {
+  width: 100%;
+  height: auto;
+	box-shadow:
+		inset 0 0 1px rgba(0,0,0,.8),
+		inset 0 2px 0 rgba(255,255,255,.5),
+		inset 0 -1px 0 rgba(0,0,0,.4);
+	border-radius: 20px;
+}
+.link:after {
+	position: absolute;
+	content: ' ';
+	width: 100%;
+	height: 30px;
+	bottom: -31px;
+	left: 0;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	background: linear-gradient(top, rgba(0,0,0,.3) 0%,rgba(255,255,255,0) 100%);
+}
+.items {
+  text-align: center;
+}
+.gallery-list {
+  font-family: 'Titillium Web', sans-serif;
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  column-count: 4;
+  column-gap: 5px;
+  text-align: center;
+}
+.gallery-list li {
+  position: relative;
+}
+.gallery-list img {
+  height: auto;
+  width: 100%;
+}
+.item-name {
+  position: absolute;
+  padding: 1% 0 ;
+  bottom: 6.4px;
+  width: 100%;
+  color: #fff;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s;
+}
+.gallery-list li:hover .item-name{
+  opacity: 1;
+  visibility: visible;
+}
+.gallery-list li:hover {
+  cursor: pointer;
+}
+.modal-overlay {
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+}
+.modal {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+  background-color: #212124;
+  color: #fff;
+  position: fixed;
+  z-index: 999;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  user-select: none;
+}
+.modal img {
+  max-height: 500px;
+  max-width: 100%;
+  margin: 40px 0px 0px;
+}
+.modal button {
+  position: absolute;
+  font-size: 50px;
+  border: none;
+  color: #ACACAC;
+  background: transparent;
+  transition: 0.8s;
+}
+.modal div {
+  margin-bottom: 20px;
+}
+.modal button:hover {
+  cursor: pointer;
+  color: #fff;
+}
+.modal .modal-close {
+  font-size: 30px;
+  right: 5px; top: 0;
+  border-radius: 0 0 0 5px;
+}
+.modal .modal-next {
+  right: 0;
+  top: calc(50% - 30px);
+}
+.modal .modal-prev {
+  left: 0;
+  top: calc(50% - 30px);
+}
+.load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about-text {
+  font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+.about-text div {
+  margin: 20px 50px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.about-text span {
+  color: #ff0084;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  header {
+    padding: 10px 0px;
+  }
+  header input {
+    float: none;
+  }
+  header input:focus {
+    width: 200px;
+  }
+  .search {
+    width: 200px;
+  }
+  .gallery-list {
+    column-count: 2;
+  }
+  .modal {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .search {
+    margin-top: 20px;
+  }
+	.gallery-list {
+    column-count: 1;
+  }
+  .modal {
+    width: 100%;
+  }
+}
